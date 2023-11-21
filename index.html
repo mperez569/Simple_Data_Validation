@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 13 - using pattern for data validation</title>
+    </head>
+
+    <body>
+        <form id = "email_form" name = "email_form" action = "#" method = "get">
+            <label for = "email_address">Email Address: </label>
+            <input type = "email" id = "email" name = "email" required autofocus autocomplete = "on">
+            
+            <br>
+            <label for = "name">Name: </label>
+            <input type = "text" id = "name" text = "name" required>
+            <br>
+            <label for = "telephone_num">Phone Number: </label>
+            <input type = "tel" id = "phone" name = "phone" required pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" title = "Example: 999-999-9999" placeholder = "999-999-9999">
+            <br>
+            <label>
+                Enter a phone number in this format (999) 999-9999
+                (
+                <input type = "tel" name = "tel1" required pattern = "[0-9]{3}" placeholder="###" aria-label="3-digit area code" size = "1">
+                )-
+                <input type = "tel" name = "tel2" required pattern = "[0-9]{3}" placeholder="###" aria-label="3-digit" size = "1">
+                -
+                <input type = "tel" name = "tel3" required pattern = "[0-9]{4}" placeholder="####" aria-label="4-digit" size = "1">
+            </label>
+            <br>
+            <input type = "submit" id = "submission" value = "ENTER">
+            <br>
+        </form>
+    </body>
+</html>
